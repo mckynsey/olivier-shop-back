@@ -14,6 +14,11 @@ app.use(
     origin: "*",
 })
 );
+//on indique le chemin des routes 
+const routes = require("./routes/products");
+//on dit quon lutiise dans lapplication 
+app.use(routes)
+
 //on indique que l'applicaiton va ecouter sur le port 5000
 app.listen(5000, () => {
     console.log("App listening on port 5000");
